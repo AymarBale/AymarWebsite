@@ -1,0 +1,845 @@
+@font-face {
+    font-family: myFont;
+    src: url(../fonts/BlackOpsOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: secondFont;
+    src: url(../fonts/CroissantOne-Regular.ttf);
+}
+
+@keyframes slide-in {}
+
+@keyframes changecardCol {
+    from {
+        background-color: white;
+    }
+
+    to {
+        background-color: gold;
+    }
+}
+
+@keyframes changeOpa {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bar {
+    height: 6px;
+    background-color: #0047ab;
+}
+
+.bar::before {
+    content: '';
+    display: flex;
+    justify-content: end;
+    width: calc(var(--percent) * 1%);
+    height: 100%;
+    background: gold;
+    white-space: nowrap;
+}
+
+div {
+    vertical-align: top;
+}
+
+body {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-color: #0047ab;
+    width: 100%;
+}
+
+.myText>h1, label>span, .myText>h1+p {
+    position: absolute;
+    top: 15%;
+    font-family: myFont;
+    color: white;
+    left: 100px;
+}
+
+.myText>h1 {
+    color: gold;
+    font-size: 20px;
+
+}
+
+.myText>p {
+    font-size: 24px;
+    margin-top: 100px;
+}
+
+nav>p {
+    font-family: myFont;
+    margin-top: -70px;
+    font-size: 16px;
+    color: white;
+}
+
+#front {
+    width: 100%;
+    height: 50vh;
+    margin: 0px;
+    position: relative;
+
+}
+
+body>img {
+
+    width: 100%;
+    height: fit-content;
+    max-width: 1800px;
+    border-width: 80px;
+    border-color: black;
+    opacity: 0.5;
+    margin: auto;
+}
+
+div>h1+p {
+    top: 35%;
+}
+
+
+#frontBox {
+    width: 90%;
+    height: 80vh;
+    top: 10vh;
+    left: 5%;
+    right: 5%;
+    bottom: 10vh;
+    /**/
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.contactMe {
+    background-color: black;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    font-family: myFont;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body a {
+    text-decoration: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.AboutSection {
+    text-align: center;
+    width: 100%;
+    height: 100vw;
+    background-color: white;
+}
+
+.AboutSection p {
+    display: block;
+    width: 100%;
+
+    margin-top: 30px;
+    font-family: monospace;
+
+    font-size: 15px;
+    color: white;
+}
+
+.AboutSection>a>h1 {
+    font-family: myFont;
+    margin-left: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+}
+
+.AboutSection>a>h1 {
+    width: 100%;
+    color: rgb(56, 54, 54);
+    font-size: 40px;
+    font-family: monospace;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.AboutSection>a>h2 {
+    width: 100%;
+    color: gold;
+    font-size: 25px;
+    font-family: monospace;
+    text-align: center;
+    margin-bottom: 0px;
+
+    vertical-align: bottom;
+}
+
+.AboutSection>div>h1>span, p>span, a>h1>span {
+    color: gold;
+}
+
+.AboutSection>div>h3 {
+    font-family: secondFont;
+    margin-left: 9px;
+    font-size: 19px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.mySection1>div>:nth-child(2) {
+    font-family: myFont;
+    margin-left: 9px;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    color: gold;
+}
+
+.myBg {
+    background: #151515 url(../images/backgroundImg.jpg) no-repeat center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 720px;
+    display: table;
+    position: relative;
+    text-align: center;
+}
+
+label {
+    font-family: myFont;
+    margin-left: 9px;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    color: gold;
+}
+
+/*
+
+---------------------------------------------------
+
+*/
+.AboutSection {
+    width: 100%;
+    height: 1092px;
+    transform: translateY(-22px);
+}
+
+.AboutSection>div {
+    width: 45%;
+    margin: auto;
+    text-align: left;
+    color: rgb(158, 157, 157);
+    font-size: 25px;
+    height: 150px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+.AboutSection>div+div {
+    width: 100%;
+}
+
+.AboutSection>div+div>div {
+    width: 90%;
+    margin-bottom: 100px;
+    text-align: left;
+    color: rgb(158, 157, 157);
+    font-size: 20px;
+    height: 150px;
+    line-height: 1.9;
+}
+
+.AboutSection>a {
+    width: 100%;
+    display: inline;
+    margin: auto;
+
+}
+
+
+
+.AboutSlot {
+    width: 50%;
+    color: rgb(12, 12, 12);
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-family: monospace;
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-block;
+    text-align: left;
+    margin: 0px;
+    font-weight: 900;
+}
+
+.AboutSection>div+div {
+    width: 450px;
+    display: inline-block;
+    line-height: 1.3;
+}
+
+.scroller {
+    display: inline-block;
+    width: 60%;
+    height: 90vh;
+    margin-left: 50px;
+    background-color: white;
+    border-radius: 14px;
+}
+
+.scroller>p {
+    display: inline;
+    margin: 0px;
+}
+
+.ScroolAnim {
+    display: inline-block;
+    width: calc(90vw - 60%);
+    height: 90vh;
+    background-color: rgb(0, 6, 32);
+    border-radius: 14px;
+}
+
+
+.HireButton {
+    display: inline-block;
+    font-family: fantasy;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #ffffff;
+    color: black;
+    padding: 25px 125px 25px 125px;
+    text-align: center;
+    white-space: nowrap;
+    border: 3px solid black;
+    transition: all 0.3s ease-in-out;
+    width: 150px;
+    height: 35px;
+}
+
+.DownloadButton {
+    display: inline-block;
+    font-family: fantasy;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: black;
+    color: white;
+    padding: 25px 125px 25px 125px;
+    text-align: center;
+    white-space: nowrap;
+    border: 3px solid black;
+    transition: all 0.3s ease-in-out;
+    width: 150px;
+    height: 35px;
+}
+
+.skill-bars+p {
+    height: 39px;
+}
+
+.AboutSection>:nth-child(2) {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 905px) {
+    .AboutSection {
+        height: 200vh;
+    }
+
+    .AboutSection>div+div {
+        margin-top: 100px;
+        width: 350px;
+    }
+
+    .HireButton {
+        display: inline-block;
+        margin: 50%;
+    }
+
+    .DownloadButton {
+        display: inline-block;
+        margin-top: 100px;
+        margin-left: -56%;
+    }
+
+    .skill-bars {
+        margin-bottom: 50px;
+    }
+
+    .skill-bars+p {
+        display: none;
+    }
+}
+
+/*
+
+-------------------------------------------------------------------->
+
+*/
+.MyFormation {
+    width: 100%;
+    height: 1595px;
+    transform: translateY(-24px);
+    background-color: rgb(238, 235, 235);
+    position: relative;
+}
+
+.MyFormation>.subject>.line {
+    position: absolute;
+    background-color: rgb(205, 202, 202);
+    width: 2px;
+    height: 235px;
+    left: 168px;
+    z-index: -1;
+}
+
+.MyFormation>a {
+    display: inline-block;
+    width: 100%;
+    color: gold;
+    font-size: 25px;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    letter-spacing: 5px;
+}
+
+.MyFormation>a+h1 {
+    width: 100%;
+    color: #151515;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.MyFormation>a+h1+p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(158, 157, 157);
+    line-height: 1.9;
+    font-size: 20px;
+    width: 500px;
+    font-weight: 900;
+    margin: auto;
+}
+
+.MyFormation>a>span {
+    color: blue;
+}
+
+.MyFormation>.subject {
+    position: relative;
+    margin: auto;
+    width: 800px;
+}
+
+.MyFormation .subject>.subName {
+    display: inline-block;
+    margin: 0px;
+    vertical-align: top;
+    text-align: left;
+    width: 130px;
+    color: #151515;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 24px;
+    color: #0047ab;
+    margin-top: 23px;
+    margin-right: 10px;
+}
+
+.MyFormation .subject>.circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #ff9500;
+    background-position: center;
+    background-size: 45px 45px;
+    border-radius: 50%;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.MyFormation>:nth-child(5)>.circle {
+    background-image: url(../images/react.png);
+}
+
+.MyFormation>:nth-child(6)>.circle {
+    background-image: url(../images/html.png);
+}
+
+.MyFormation>:nth-child(7)>.circle {
+    background-image: url(../images/java.png);
+}
+
+.MyFormation>:nth-child(8)>.circle {
+    background-image: url(../images/mySql.png);
+}
+
+.MyFormation .subject>.addInfo {
+    display: inline-block;
+    margin: 0px;
+    color: #151515;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 20px;
+    color: gold;
+    height: 20px;
+    vertical-align: top;
+    margin-top: 30px;
+}
+
+.addInfo span {
+    display: inline-block;
+    width: 55px;
+    height: 3px;
+    background-color: rgb(158, 157, 157);
+}
+
+.pushText {
+    display: inline-block;
+    width: 30%;
+}
+
+.pushText+p {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(158, 157, 157);
+    line-height: 1.5;
+    font-size: 15px;
+    width: 500px;
+}
+
+@media only screen and (max-width: 719px) {
+    .MyFormation>.subject {
+        width: 600px;
+    }
+
+    .MyFormation {
+        height: 1700px;
+    }
+
+    .MyFormation>.subject>.line {
+        height: 335px;
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 905px) {
+    .MyFormation>.subject {
+        width: 600px;
+    }
+
+    .MyFormation {
+        height: 1700px;
+    }
+
+    .MyFormation>.subject>.line {
+        height: 335px;
+        display: none;
+    }
+}
+
+/*
+--------------------------CONTACT SECTION--------------------------------------------
+*/
+.contactSection {
+    width: 100%;
+    height: 140vh;
+    transform: translateY(-24px);
+    background-color: #151515;
+    position: relative;
+    padding: 0px;
+}
+
+.contactSection>a {
+    display: inline-block;
+    width: 100%;
+    color: gold;
+    font-size: 25px;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    letter-spacing: 5px;
+}
+
+.contactSection>h1 {
+    width: 100%;
+    color: #ffffff;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.contactSection>h1+p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(158, 157, 157);
+    line-height: 1.9;
+    font-size: 14px;
+    width: 500px;
+    font-weight: 900;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.form-field {
+    position: relative;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+.form-field>input, .form-field>textarea {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #151515;
+    padding: 16.941px 18.823px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1.9px;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.form-field>input[type="text"]:focus {
+    border: 2px solid #007bff;
+}
+
+.submitForm {
+    margin: auto;
+    font-size: 0.75rem;
+    display: block;
+    letter-spacing: .1rem;
+    height: 3.6rem;
+    padding: 0 3rem;
+    margin-top: 4.8rem;
+    width: 60%;
+    font-family: monospace;
+    font-weight: 1000;
+    background: gold;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+}
+
+/*------------------------MonPortofolio-------------------------*/
+
+.MonPortofolio {
+    width: 100%;
+    margin-bottom: 20px;
+    transform: translateY(-24px);
+}
+
+.MonPortofolio>a {
+    display: block;
+    width: 100%;
+    color: gold;
+    font-size: 25px;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 5px;
+
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.myWork {
+    width: 100vw;
+    height: 900px;
+    margin: auto;
+}
+
+.content {
+    text-align: center;
+    border-radius: 3px;
+    background-color: white;
+    width: 180px;
+    height: 30%;
+    margin: auto;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 43px;
+    margin-right: 43px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    opacity: 0;
+    background-color: #151515;
+    height: 40px;
+    margin: 0px;
+}
+
+.content:hover {
+    animation: 1s 1 normal changecardCol;
+    background-color: gold;
+}
+
+.content:hover .title {
+    animation: 1s 1 normal changeOpa;
+    opacity: 1;
+    color: blue;
+    font-size: 15px;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.menu-item.but>img {
+    width: 50px;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width:400px) {
+    .AboutSection {}
+
+    .MonPortofolio {
+        text-align: center;
+
+    }
+
+    .myWork {
+        height: fit-content;
+
+    }
+
+    .content {
+        height: 270px;
+    }
+}
+
+@media only screen and (min-width: 721px) and (max-width: 905px) {
+    .content {
+        width: 180px;
+        height: 270px;
+        margin: 0px;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .pushText+p {
+        width: 500px;
+    }
+
+    .MonPortofolio {
+        text-align: center;
+    }
+
+    .AboutSection {
+        height: 1500px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width:720px) {
+    .AboutSection {
+        height: fit-content;
+    }
+
+    .AboutSection>div {
+        height: fit-content;
+        vertical-align: baseline;
+    }
+
+    .section+.section {
+        margin-top: 60px;
+    }
+
+    .skill-bars {
+        padding-left: 0px;
+    }
+
+    .pushText+p {
+        width: 90vw;
+    }
+
+    .MyFormation .subject>.subName {
+        margin-left: 10px;
+    }
+
+    .pushText {
+        width: 10px;
+    }
+
+    .MonPortofolio {
+        height: 1000px;
+        text-align: center;
+    }
+
+    .MyFormation>a+h1+p {
+        width: 100vw;
+    }
+
+    .MyFormation .subject>.circle {
+        margin-right: 0px;
+    }
+
+    .MyFormation .subject>.addInfo {
+        font-size: 13px;
+    }
+
+    .myWork {
+        text-align: center;
+    }
+
+    .content {
+        margin: 10px;
+        display: inline-block;
+
+    }
+
+    .contactSection>h1+p {
+        width: 100vw;
+    }
+
+}
