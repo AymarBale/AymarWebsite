@@ -81,21 +81,21 @@ body {
 .navbar ul li .dot::before {
     height: 5px;
     width: 5px;
-    border: 2px solid #333;
+    border: 2px solid gold;
     right: 0;
     transform: translateY(-50%);
 }
 
 .navbar ul li .dot.active::before,
 .navbar ul li:hover .dot::before {
-    border-color: rgb(77, 74, 74);
-    background: rgb(77, 74, 74);
+    border-color: gold;
+    background: gold;
 }
 
 .navbar ul li .dot::after {
     height: 15px;
     width: 15px;
-    border: 2px solid rgb(77, 74, 74);
+    border: 2px solid gold;
     right: -5px;
     transform: translateY(-50%) scale(0);
 }

@@ -20,7 +20,7 @@
 
 </head>
 
-<body onscroll="myFunction()">
+<body>
     <nav class="navbar">
         <ul>
             <li>
@@ -57,58 +57,7 @@
 
     </nav>
 
-    <script type="text/javascript">
-        let arrDot = [document.getElementById('dot1'), document.getElementById('dot2'), document.getElementById('dot3'), document.getElementById('dot4'),
-        document.getElementById('dot5')];
-        let arrSection = [document.getElementById('nav-4'), document.getElementById('nav-5'), document.getElementById('nav-6'), document.getElementById('nav-7'), document.getElementById('nav-8')];
-        for (let i = 1; i <= 5; i++) {
-            (function (index) {
-                var myButton = document.getElementById('dot' + index);
 
-                // Add a click event listener to the button
-                myButton.addEventListener('click', function () {
-                    removeAllDots(myButton);
-                    console.log(myButton.id);
-                });
-            })(i);
-        }
-
-        for (let i = 0; i < arrSection.length; i++) {
-            (function (index) {
-                var myElement = arrSection[i];
-
-                // Add a mouseenter event listener to the element
-                myElement.addEventListener('mouseenter', function () {
-                    // This function will be called when the mouse enters the element
-                    console.log('Mouse entered the element!');
-                    // You can call your custom function here
-                    goToSection(i)
-                });
-            })(i);
-        }
-
-        function removeAllDots(clickedButton) {
-            // Assuming you have a function to remove the "active" class from all buttons
-            // Loop through all buttons and remove the "active" class
-            for (let i = 1; i <= 5; i++) {
-                var dot = document.getElementById('dot' + i);
-                dot.classList.remove('active');
-            }
-
-            // Add the "active" class to the clicked button
-            clickedButton.classList.add('active');
-        }
-
-        function goToSection(index) {
-            for (let i = 1; i <= 5; i++) {
-                var dot = document.getElementById('dot' + i);
-                dot.classList.remove('active');
-            }
-            var dot = document.getElementById('dot' + (index + 1));
-            dot.classList.add('active')
-        }
-
-    </script>
     <div class="myBg" id="nav-4">
 
 
@@ -134,10 +83,10 @@
         </nav>
 
         <div id="frontBox"></div><!---->
-        <button class="contactMe" href="#nav-8">contact ME</button>
+        <button class="contactMe" id="contactMeBut" href="#nav-8">contact ME</button>
         <section class="nav-9">
             <nav>
-                <a class="item" href="#nav-5" onclick="myFunction()">
+                <a class="item" href="#nav-5">
                     <div data-text="What I can do do" class="linktext">About</div>
                 </a>
             </nav>
@@ -168,7 +117,7 @@
                 </br>
                 <h1 class="AboutSlot">EMAIL</h1>
                 <br>aymarbale@gmail.com</br><br>
-                <a class="HireButton" href="">HIRE ME</a>
+                <a class="HireButton" href="#nav-8">HIRE ME</a>
             </div>
         </div>
         <div class="section">
@@ -194,7 +143,7 @@
                 <div class="bar" style="--percent: 50;"></div>
             </ul>
             <p></p>
-            <a class="DownloadButton" href="">Download Cv</a>
+            <a class="DownloadButton" href="Resume.docx" download="Resume.docx">Download Cv</a>
         </div>
 
 
@@ -300,11 +249,60 @@
                 aria-required="true"></textarea>
         </div>
         <button class="submitForm" id="sendEmailButton">SUBMIT</button>
-        <script src="/js/scripts.js"></script>
+        <script src="js/scripts.js"></script>
 
     </div>
     </div>
+    <script type="text/javascript">
+        let arrDot = [document.getElementById('dot1'), document.getElementById('dot2'), document.getElementById('dot3'), document.getElementById('dot4'),
+        document.getElementById('dot5')];
+        let arrSection = [document.getElementById('nav-4'), document.getElementById('nav-5'), document.getElementById('nav-6'), document.getElementById('nav-7'), document.getElementById('nav-8')];
 
+        for (let i = 1; i <= 5; i++) {
+            (function (index) {
+                var myButton = document.getElementById('dot' + index);
+
+                // Add a click event listener to the button
+                myButton.addEventListener('click', function () {
+                    removeAllDots(myButton);
+                });
+            })(i);
+        }
+
+        for (let i = 0; i < arrSection.length; i++) {
+            (function (index) {
+                var myElement = arrSection[i];
+
+                myElement.addEventListener('mouseenter', function () {
+
+                    goToSection(i)
+                });
+
+            })(i);
+        }
+
+        function removeAllDots(clickedButton) {
+            // Assuming you have a function to remove the "active" class from all buttons
+            // Loop through all buttons and remove the "active" class
+            for (let i = 1; i <= 5; i++) {
+                var dot = document.getElementById('dot' + i);
+                dot.classList.remove('active');
+            }
+
+            // Add the "active" class to the clicked button
+            clickedButton.classList.add('active');
+        }
+
+        function goToSection(index) {
+            for (let i = 1; i <= 5; i++) {
+                var dot = document.getElementById('dot' + i);
+                dot.classList.remove('active');
+            }
+            var dot = document.getElementById('dot' + (index + 1));
+            dot.classList.add('active')
+        }
+
+    </script>
 </body>
 
 </html>
