@@ -88,14 +88,14 @@ body {
 
 .navbar ul li .dot.active::before,
 .navbar ul li:hover .dot::before {
-    border-color: gold;
-    background: gold;
+    border-color: red;
+    background: red;
 }
 
 .navbar ul li .dot::after {
     height: 15px;
     width: 15px;
-    border: 2px solid gold;
+    border: 2px solid red;
     right: -5px;
     transform: translateY(-50%) scale(0);
 }
