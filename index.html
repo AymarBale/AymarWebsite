@@ -17,11 +17,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
     <script src="js/main.js"></script>
+    <script src="js/sendEmail.js"></script>
 
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar ">
         <ul>
             <li>
                 <a href="#nav-4" id="dot1" class="dot active" data-scroll="home">
@@ -110,8 +111,8 @@
                 <h1 class="AboutSlot">JOB:</h1>
                 <br>Student in Computer Science
                 </br>
-                <h1 class="AboutSlot">WEBSITE:</h1>
-                <br>test
+                <h1 class="AboutSlot">HOBBIES:</h1>
+                <br>drawing ,programming
                 </br>
                 <h1 class="AboutSlot">EMAIL</h1>
                 <br>aymarbale@gmail.com</br><br>
@@ -233,24 +234,22 @@
             <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required=""
                 aria-required="true">
         </div>
+
         <div class="form-field">
-            <input name="contactName" type="text" id="contactName" placeholder="Email" value="" minlength="2"
-                required="" aria-required="true">
-        </div>
-        <div class="form-field">
-            <input name="contactName" type="text" id="contactName" placeholder="Subject" value="" minlength="2"
+            <input name="contactName" type="text" id="subjectContact" placeholder="Subject" value="" minlength="2"
                 required="" aria-required="true">
         </div>
 
         <div class="form-field">
-            <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""
+            <textarea name="contactMessage" id="subjectMessage" placeholder="message" rows="10" cols="50" required=""
                 aria-required="true"></textarea>
         </div>
-        <button class="submitForm" id="sendEmailButton">SUBMIT</button>
-        <script src="js/scripts.js"></script>
+        <button class="submitForm" onclick="sendEmail()" id="sendEmailButton">SUBMIT</button>
+
 
     </div>
     </div>
+    <a href="" id="sendEmail"></a>
     <script type="text/javascript">
         let arrDot = [document.getElementById('dot1'), document.getElementById('dot2'), document.getElementById('dot3'), document.getElementById('dot4'),
         document.getElementById('dot5')];
