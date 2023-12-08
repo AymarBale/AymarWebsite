@@ -781,7 +781,7 @@ label {
 }
 
 @media only screen and (min-width: 401px) and (max-width:720px) {
-    body {
+    #taille {
         color: red;
     }
 
