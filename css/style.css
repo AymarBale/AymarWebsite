@@ -309,6 +309,10 @@ label {
     font-weight: 900;
 }
 
+#empty {
+    height: 46px;
+}
+
 .AboutSection>div+div {
     width: 450px;
     display: inline-block;
