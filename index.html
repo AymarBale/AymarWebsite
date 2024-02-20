@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html> <!--<![endif]-->
+
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -12,55 +10,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/dotSideBar.css">
-    <link rel="stylesheet" type="text/css" href="./css/dotSideBar.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="https://kit.fontawesome.com/c01fbeac04.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/topNavbar.css">
     <script src="js/main.js"></script>
     <script src="js/sendEmail.js"></script>
 
 </head>
 
 <body>
-    <nav class="navbar ">
-        <ul>
-            <li>
-                <a href="#nav-4" id="dot1" class="dot active" data-scroll="home">
-                    <span>Home</span>
-                </a>
-            </li>
 
-            <li>
-                <a href="#nav-5" id="dot2" class="dot" data-scroll="about">
-                    <span>About</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#nav-6" id="dot3" class="dot" data-scroll="service">
-                    <span>Resume</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#nav-7" id="dot4" class="dot" data-scroll="project">
-                    <span>Portofolio</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#nav-8" id="dot5" class="dot" data-scroll="contact">
-                    <span>Contact</span>
-                </a>
-            </li>
-
+    <div class="myNavbar">
+        <button class="toggle-button" onclick="toggleMenu()">☰</button>
+        <ul class="menu-bar">
+            <li onclick="toggleColor(this)"><a href="#nav-4">Home</a></li>
+            <li onclick="toggleColor(this)"><a href="#nav-5">About</a></li>
+            <li onclick="toggleColor(this)"><a href="#nav-9">Skills</a></li>
+            <li onclick="toggleColor(this)"><a href="#nav-6">Resume</a></li>
+            <li onclick="toggleColor(this)"><a href="#nav-7">Projet</a></li>
+            <li onclick="toggleColor(this)"><a href="#nav-8">Contact</a></li>
         </ul>
-    </nav>
+        <script>
+            let show = false;
+            function toggleColor(clickedElement) {
+                // Remove the "clicked" class and hyphens from all links
+                var allLinks = document.querySelectorAll('.menu-bar li');
+                allLinks.forEach(function (link) {
+                    link.classList.remove('clicked');
+                    var linkText = link.querySelector('a');
+                    linkText.textContent = linkText.textContent.replace(/^-|-$|/g, ''); // Remove hyphens
+                });
 
+                // Add the "clicked" class and hyphens to the clicked link
+                clickedElement.classList.add('clicked');
+                var clickedLink = clickedElement.querySelector('a');
+                clickedLink.textContent = '- ' + clickedLink.textContent + ' -';
+                var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+                // Set the threshold for screen size
+                var threshold = 709;
+
+                // Check if the screen width is less than 709 pixels
+                if (screenWidth < threshold) {
+                    toggleMenu();
+                } else {
+                    var menu = document.querySelector('.menu-bar');
+                    menu.style.display = 'flex';
+                }
+
+            }
+
+            function toggleMenu() {
+                var menu = document.querySelector('.menu-bar');
+
+                if (show === false) {
+                    // Show the menu
+                    menu.style.display = 'flex';
+                    show = true;
+                } else {
+                    // Hide the menu
+                    menu.style.display = 'none';
+                    show = false;
+                }
+            }
+
+            // Additional script to adjust styles based on window width
+            function adjustStyles() {
+                var windowWidth = window.innerWidth;
+                var menuBar = document.querySelector('.menu-bar');
+                var toggleButton = document.querySelector('.toggle-button');
+
+                if (windowWidth <= 709) {
+                    menuBar.style.flexDirection = 'column';
+                    menuBar.style.alignItems = 'flex-start';
+                    toggleButton.style.display = 'inline-block';
+                } else {
+                    menuBar.style.flexDirection = 'row';
+                    menuBar.style.alignItems = 'center';
+                    toggleButton.style.display = 'none';
+                }
+            }
+
+            // Call the adjustStyles function initially and on window resize
+            adjustStyles();
+            window.addEventListener('resize', adjustStyles);
+        </script>
+    </div>
     <div class="myBg" id="nav-4">
         <div class="myText">
             <h1>Hello, world</h1>
-            <p>Hi I m Nathanael Bale <span id="taille"></span></p>
+            <p>Hi I m Nathanael Bale </p>
         </div>
         <div id="frontBox"></div>
         <nav class="menu"><input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
@@ -76,8 +116,7 @@
             </a>
             <a href="https://github.com/AymarBale?tab=repositories" class="menu-item but"> <img
                     src="./images/github_icon.png" alt=""> </a>
-            <a href="https://www.facebook.com/profile.php?id=100009130360618" class="menu-item but"> <img
-                    src="./images/facebook_icon.png" alt=""> </a>
+
             <p>My socials</p>
         </nav>
 
@@ -86,7 +125,7 @@
         <section class="nav-9">
             <nav>
                 <a class="item" href="#nav-5">
-                    <div data-text="What I can do do" class="linktext">About</div>
+                    <button class="button-86" role="button">About</button>
                 </a>
             </nav>
         </section>
@@ -95,57 +134,114 @@
             <h2>ABOUT</h2>
             <h1>Let me introduce myself</h1>
         </a>
-        <div>Hi my name is Nathan I love programming App and draw right now I am looking for an internship so feel free
-            to reach out if you're interested in my Work or you find my website intriguing .</div>
-        <div class="section">
-            <h1 class="AboutSlot">PROFILE</h1>
-            <div>I am a student in college in a CS program right now looking for an internship and although I am a
+        <div id="first"><img src="./images/profilePic.jpeg" id="profilePic" alt="">
+            <div class="info">I am a student in college in a CS program right now looking for a internship and althought
+                I
+                am a
                 beginner at programming I am willing to learn more and receives critical feedback on what I'm doing
-                wrong<br><br>
-                <h1 class="AboutSlot">FULLNAME:</h1>
-                <br id="inner">Nathanael Aymar Bale
-                </br>
-                <h1 class="AboutSlot">BIRTH DATE:</h1>
-                <br>May 27,2002
-                </br>
-                <h1 class="AboutSlot">JOB:</h1>
-                <br>Student in Computer Science
-                </br>
-                <h1 class="AboutSlot">HOBBIES:</h1>
-                <br>drawing ,programming
-                </br>
-                <h1 class="AboutSlot">EMAIL</h1>
-                <br>aymarbale@gmail.com</br><br>
-                <a class="HireButton" href="#nav-8">HIRE ME</a>
+                wrong</div>
+        </div>
+        <div id="second">
+            <p>- EDUCATION -</p>
+            <div><a href="https://collegeuniversel.ca/"><img src="./images/schoolLogo.png" alt="">
+                    <p>Universel College,Montreal <br><span>-Programming And Technologies Web - Attestation of College
+                            Studies</span><br><span>September 2022 - Agust 2024</span></p>
+                </a>
+
             </div>
         </div>
-        <div class="section">
-            <h1 class="AboutSlot">SKILLS</h1>
-            <div>I am a student in college in a CS program right now looking for a internship and althought I am a
-                beginner at programming I am willing to learn more and receives critical feedback on what I'm doing
-                wrong
+        <div id="third">
+            <p>- INTEREST -</p>
+            <div>
+                <div id="interest"><i class="fas fa-code"></i><span>Coding</span></div>
+                <div id="interest"><i class="fab fa-html5"></i><span>Web Dev</span></div>
+                <div id="interest"><i class="fas fa-mobile-alt"></i><span>App Dev</span></div><br>
+                <div id="interest"><i class="fas fa-headset"></i><span>Gaming</span></div>
+                <div id="interest"><i class="fas fa-drafting-compass"></i><span>Drawing</span></div>
+                <div id="interest"><i class="fas fa-dumbbell"></i><span>Working out</span></div>
             </div>
-            <ul class="skill-bars">
-                <h1 class="AboutSlot">HTML5</h1>
-                <div class="bar" style="--percent: 89;"></div>
-                <p></p>
-                <h1 class="AboutSlot">CSS3</h1>
-                <div class="bar" style="--percent: 85;"></div>
-                <p></p>
-                <h1 class="AboutSlot">REACT</h1>
-                <div class="bar" style="--percent: 80;"></div>
-                <p></p>
-                <h1 class="AboutSlot">PHP</h1>
-                <div class="bar" style="--percent: 75;"></div>
-                <p></p>
-                <h1 class="AboutSlot">JAVA</h1>
-                <div class="bar" style="--percent: 90;"></div>
-            </ul>
-            <p></p>
-            <a class="DownloadButton" href="Resume.docx" download="Resume.docx">Download Cv</a>
+        </div>
+    </div>
+    <div class="SkillSection" id="nav-9">
+        <h1> - My skill -</h1>
+        <h2>DEVELOPEMENT</h2>
+        <div>
+            <div class="skill"><img src="./images/Icon/android.png" alt="">
+                <p>test</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/css-3.png" alt="">
+                <p>CSS 3</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/hashtag.png" alt="">
+                <p>C #</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/html-5.png" alt="">
+                <p>HTML 5</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/java-script.png" alt="">
+                <p>Javascript</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/letter-c.png" alt="">
+                <p>c</p>
+            </div>
+            <br>
+            <div class="skill"><img src="./images/Icon/library.png" alt="">
+                <p>React</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/nodejs.png" alt="">
+                <p>node.js</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/php.png" alt="">
+                <p>Php</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/python.png" alt="">
+                <p>Python</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/website.png" alt="">
+                <p>.Net</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/godot.png" alt="">
+                <p>Godot</p>
+            </div>
         </div>
 
-
+        <h2>DEVELOPEMENT TOOLS - DATABASE</h2>
+        <div>
+            <div class="skill"><img src="./images/Icon/sql-server.png" alt="">
+                <p>SQL</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/mysql.png" alt="">
+                <p>MySQL</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/elephant.png" alt="">
+                <p>PostGres</p>
+            </div>
+        </div>
+        <h2>VERSION CONTROL SYSTEMS</h2>
+        <div>
+            <div class="skill"><img src="./images/Icon/github.png" alt="">
+                <p>Github</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/bitbucket.png" alt="">
+                <p>Bitbucket</p>
+            </div>
+        </div>
+        <h2>TASK MANAGEMENT TOOLS - EXTRENAL TOOLS</h2>
+        <div>
+            <div class="skill"><img src="./images/Icon/trello.png" alt="">
+                <p>Trello</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/jira.png" alt="">
+                <p>Jira</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/postman.png" alt="">
+                <p>PostMan</p>
+            </div>
+        </div>
+        <h2 id="softSkill">------- Soft skill ------- :</h2>
+        <h2>- Agile methodology </h2>
+        <h2>- Problem-solving and analytical skills.</h2>
+        <h2>- Patience and hard working.</h2>
     </div>
     <div class="MyFormation" id="nav-6"><a href="#nav-7">RESUME</a>
         <h1>More about my formation</h1>
@@ -201,29 +297,61 @@
             </p>
         </div>
     </div>
-    <div class="MonPortofolio" id="nav-7"><a href="#nav-8">PORTOFOLIO</a>
+    <div class="MonPortofolio" id="nav-7"><a href="#nav-8">PROJETS</a>
         <div class="myWork">
-            <div class="content">
-                <p class="title">Albion</p>
+            <div class="content"
+                onclick="openModal('AfroBeatTrivia', 'A description for Albion.', './images/projects/afroBeat.png', 'https://github.com/AymarBale/AfroBeatTrivia')">
+                <p class="title">AfroBeatTrivia</p>
             </div>
-            <div class="content">
-                <p class="title">MathFight</p>
+            <div class="content"
+                onclick="openModal('CarCollection' ,'A description for ', './images/projects/CarCollection.png', 'https://github.com/AymarBale/')">
+                <p class="title">CarCollection</p>
             </div>
-            <div class="content">
-                <p class="title">Snake Infection</p>
+            <div class="content"
+                onclick="openModal('Dog aroundWorld' ,'A description for ', './images/projects/dog.png', 'https://github.com/AymarBale/')">
+                <p class="title">Dog aroundWorld </p>
             </div>
 
-            <div class="content">
-                <p class="title">My experience with three.js</p>
+            <div class="content"
+                onclick="openModal('Drip Dynastie' ,'A description for ', './images/projects/DripDynastie.png', 'https://github.com/AymarBale/')">
+                <p class="title">Drip Dynastie</p>
             </div>
-            <div class="content">
-                <p class="title">Calcultor App</p>
+            <div class="content"
+                onclick="openModal('Js Game' ,'A description for ', './images/projects/GameJs.png', 'https://github.com/AymarBale/')">
+                <p class="title">Js Game</p>
             </div>
-            <div class="content">
-                <p class="title">Dog around the world</p>
+            <div class="content"
+                onclick="openModal('Gaming website' ,'A description for ', './images/projects/gamingWeb.png', 'https://github.com/AymarBale/')">
+                <p class="title">Gaming website</p>
+            </div>
+            <div class="content"
+                onclick="openModal('Math Fight' ,'A description for ', './images/projects/mathFight.png', 'https://github.com/AymarBale/')">
+                <p class="title">Math Fight</p>
+            </div>
+            <div class="content"
+                onclick="openModal('Movie Heaven' ,'A description for ', './images/projects/movieHeaven.png', 'https://github.com/AymarBale/')">
+                <p class="title">Movie Heaven</p>
+            </div>
+            <div class="content"
+                onclick="openModal('Reptile Infection' ,'A description for ', './images/projects/reptileInfection.png', 'https://github.com/AymarBale/')">
+                <p class="title">Reptile Infection</p>
+            </div>
+            <div class="content"
+                onclick="openModal('Shoe store' ,'A description for ', './images/projects/shoesWebsite.png', 'https://github.com/AymarBale/')">
+                <p class="title">Shoe store</p>
+            </div>
+
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <img id="modalImage" alt="Project Image">
+                <p id="modalDescription"></p>
+
+                <p><a id="githubLink" target="_blank"><img src="./images/Icon/github.png" alt=""></a></p>
             </div>
         </div>
-
     </div>
 
     <div class="contactSection" id="nav-8"><a href="#nav-8">Contact</a>
@@ -250,56 +378,7 @@
     </div>
     </div>
     <a href="" id="sendEmail"></a>
-    <script type="text/javascript">
-        let arrDot = [document.getElementById('dot1'), document.getElementById('dot2'), document.getElementById('dot3'), document.getElementById('dot4'),
-        document.getElementById('dot5')];
-        let arrSection = [document.getElementById('nav-4'), document.getElementById('nav-5'), document.getElementById('nav-6'), document.getElementById('nav-7'), document.getElementById('nav-8')];
 
-        for (let i = 1; i <= 5; i++) {
-            (function (index) {
-                var myButton = document.getElementById('dot' + index);
-
-                // Add a click event listener to the button
-                myButton.addEventListener('click', function () {
-                    removeAllDots(myButton);
-                });
-            })(i);
-        }
-
-        for (let i = 0; i < arrSection.length; i++) {
-            (function (index) {
-                var myElement = arrSection[i];
-
-                myElement.addEventListener('mouseenter', function () {
-
-                    goToSection(i)
-                });
-
-            })(i);
-        }
-
-        function removeAllDots(clickedButton) {
-            // Assuming you have a function to remove the "active" class from all buttons
-            // Loop through all buttons and remove the "active" class
-            for (let i = 1; i <= 5; i++) {
-                var dot = document.getElementById('dot' + i);
-                dot.classList.remove('active');
-            }
-
-            // Add the "active" class to the clicked button
-            clickedButton.classList.add('active');
-        }
-
-        function goToSection(index) {
-            for (let i = 1; i <= 5; i++) {
-                var dot = document.getElementById('dot' + i);
-                dot.classList.remove('active');
-            }
-            var dot = document.getElementById('dot' + (index + 1));
-            dot.classList.add('active')
-        }
-
-    </script>
 </body>
 
 </html>

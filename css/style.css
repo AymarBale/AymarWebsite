@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
 @font-face {
     font-family: myFont;
     src: url(../fonts/BlackOpsOne-Regular.ttf);
@@ -60,6 +62,7 @@ body {
     height: 100vh;
     background-color: #0047ab;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .myText>h1, label>span, .myText>h1+p {
@@ -97,7 +100,6 @@ nav>p {
 }
 
 body>img {
-
     width: 100%;
     height: fit-content;
     max-width: 1800px;
@@ -128,7 +130,6 @@ div>h1+p {
 
 .contactMe {
     background-color: black;
-    /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -156,30 +157,11 @@ body {
 }
 
 .AboutSection {
-    text-align: center;
     width: 100%;
     height: 100vw;
     background-color: white;
 }
 
-.AboutSection p {
-    display: block;
-    width: 100%;
-
-    margin-top: 30px;
-    font-family: monospace;
-
-    font-size: 15px;
-    color: white;
-}
-
-.AboutSection>a>h1 {
-    font-family: myFont;
-    margin-left: 15px;
-    font-size: 16px;
-    margin-top: 10px;
-    color: white;
-}
 
 .AboutSection>a>h1 {
     width: 100%;
@@ -197,35 +179,13 @@ body {
     font-family: monospace;
     text-align: center;
     margin-bottom: 0px;
-
     vertical-align: bottom;
 }
 
-.AboutSection>div>h1>span, p>span, a>h1>span {
-    color: gold;
-}
 
-.AboutSection>div>h3 {
-    font-family: secondFont;
-    margin-left: 9px;
-    font-size: 19px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.mySection1>div>:nth-child(2) {
-    font-family: myFont;
-    margin-left: 9px;
-    font-size: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    vertical-align: top;
-    color: gold;
-}
 
 .myBg {
-    background: #151515 url(../images/backgroundImg.jpg) no-repeat center bottom;
+    background: #151515 url(../images/c-backgroup.jpg) no-repeat center bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -259,156 +219,226 @@ label {
     transform: translateY(-22px);
 }
 
-.AboutSection>div {
-    width: 45%;
-    margin: auto;
-    text-align: left;
-    color: rgb(158, 157, 157);
-    font-size: 25px;
-    height: 150px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+#profilePic {
+    width: auto;
+    height: 200px;
+    padding: 3px;
+    border-radius: 3px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 20px;
+    border: 3px solid #0047ab;
+    padding: 10px;
+    background-image: linear-gradient(45deg, gold 25%, transparent 25%, transparent 50%, gold 50%, gold 75%, transparent 75%, #fff);
 }
 
 
-
-.AboutSection>div+div {
-    width: 100%;
+#first {
+    text-align: center;
 }
 
-.AboutSection>div+div>div {
-    width: 90%;
-    margin-bottom: 100px;
-    text-align: left;
-    color: rgb(158, 157, 157);
+#profilePic:hover {
+    transform: scale(1.2);
+    /* Adjust the scale factor for zoom level */
+}
+
+.info {
+    padding-left: 20px;
+    font-family: monospace;
     font-size: 20px;
-    height: 150px;
-    line-height: 1.9;
-}
-
-.AboutSection>a {
-    width: 100%;
-    display: inline;
-    margin: auto;
-
-}
-
-
-
-.AboutSlot {
+    vertical-align: center;
+    display: inline-block;
     width: 50%;
-    color: rgb(12, 12, 12);
-    font-size: 15px;
-    letter-spacing: 2px;
+    height: 200px;
+    text-align: left;
+}
+
+#second {
+    text-align: center;
+}
+
+#second>p {
+    text-align: center;
+    margin-left: 10px;
+    font-family: monospace;
+    color: gold;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#second>p+div {
+    width: 80%;
+    display: inline-block;
+    background-image: linear-gradient(315deg, #0047ab 0%, #5078F2 74%);
+    height: 200px;
+    text-align: left;
+    padding-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#second>p+div:hover {
+    transform: scale(1.05);
+}
+
+#second>p+div>a>img {
+    width: 180px;
+    height: 180px;
+    margin-top: 10px
+}
+
+#second>p+div>a>img+p {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    font-family: monospace;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+}
+
+#second>p+div>a>img+p>span {
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#third>p {
+    text-align: center;
+    margin-left: 10px;
+    font-family: monospace;
+    color: gold;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#third>div {
+    text-align: center;
+}
+
+#third>p+div>#interest {
+    display: inline-block;
+    margin: 5px;
+    margin-left: 50px;
+    width: 250px;
+    height: 110px;
+    background-image: linear-gradient(315deg, #0047ab 0%, #5078F2 74%);
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+#third>p+div>#interest:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(315deg, #0047ab 0%, gold 74%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    /* Ensure the pseudo-element doesn't interfere with mouse events */
+}
+
+#third>p+div>#interest:hover:before {
+    opacity: 1;
+}
+
+#third>p+div>#interest>svg {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    font-size: 50px;
+}
+
+#interest>span {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    top: 40%;
+    font-family: monospace;
+    left: 140px
+}
+
+/*
+-------------------------------------------------------------------->
+*/
+
+.SkillSection {
+    width: 100%;
+    height: fit-content;
+    background-color: #151515;
+    padding-bottom: 20px;
+    transform: translateY(-22px);
+    /**/
+}
+
+.SkillSection>h1 {
+    width: 100%;
+    color: gold;
+    font-size: 25px;
     font-family: monospace;
     text-align: center;
-    font-family: sans-serif;
-    display: inline-block;
-    text-align: left;
-    margin: 0px;
-    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 22px;
 }
 
-.AboutSection>div+div {
-    width: 450px;
-    display: inline-block;
-    line-height: 1.3;
+.SkillSection>h2 {
+    font-family: monospace;
+    font-size: 20px;
+    color: #fff;
+    margin-left: 30px;
+    text-decoration: underline;
 }
 
-.scroller {
-    display: inline-block;
-    width: 60%;
-    height: 90vh;
-    margin-left: 50px;
-    background-color: white;
-    border-radius: 14px;
+.SkillSection>h2+div {
+    margin-left: 30px;
 }
 
-.scroller>p {
-    display: inline;
-    margin: 0px;
-}
-
-.ScroolAnim {
+.skill {
     display: inline-block;
-    width: calc(90vw - 60%);
-    height: 90vh;
-    background-color: rgb(0, 6, 32);
-    border-radius: 14px;
-}
-
-
-.HireButton {
-    display: inline-block;
-    font-family: fantasy;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: #ffffff;
-    color: black;
-    padding: 25px 125px 25px 125px;
+    width: 125px;
+    height: 125px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
     text-align: center;
-    white-space: nowrap;
-    border: 3px solid black;
-    transition: all 0.3s ease-in-out;
-    width: 150px;
-    height: 35px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.DownloadButton {
-    display: inline-block;
-    font-family: fantasy;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: black;
-    color: white;
-    padding: 25px 125px 25px 125px;
-    text-align: center;
-    white-space: nowrap;
-    border: 3px solid black;
-    transition: all 0.3s ease-in-out;
-    width: 150px;
-    height: 35px;
+.skill:hover {
+    transform: scale(1.1);
 }
 
-.skill-bars+p {
-    height: 39px;
+.skill>img+p {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #0047ab;
+    background-color: cadetblue;
 }
 
-.AboutSection>:nth-child(2) {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 19px;
-    font-weight: 900;
-    margin-bottom: 30px;
+.skill>img {
+    width: 70px;
+    height: auto;
+    margin-top: 10px;
 }
 
-@media only screen and (min-width: 720px) and (max-width: 905px) {
-    .AboutSection {
-        height: 200vh;
-    }
+#softSkill {
+    color: #ff9500;
+    text-decoration: none;
+}
 
-    .AboutSection>div+div {
-        margin-top: 100px;
-        width: 350px;
-    }
-
-    .HireButton {
-        display: inline-block;
-        margin: 50%;
-    }
-
-    .DownloadButton {
-        display: inline-block;
-        margin-top: 100px;
-        margin-left: -56%;
-    }
-
-    .skill-bars {
-        margin-bottom: 50px;
-    }
-
-    .skill-bars+p {
-        display: none;
-    }
+#softSkill+h2, #softSkill+h2+h2, #softSkill+h2+h2+h2 {
+    text-decoration: none;
 }
 
 /*
@@ -710,6 +740,82 @@ label {
     margin-left: 43px;
     margin-right: 43px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease;
+}
+
+.content:nth-child(1) {
+    background-image: url('../images/projects/afroBeat.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(2) {
+    background-image: url('../images/projects/carCollection.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(3) {
+    background-image: url('../images/projects/dog.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(4) {
+    background-image: url('../images/projects/DripDynastie.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(5) {
+    background-image: url('../images/projects/GameJs.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(6) {
+    background-image: url('../images/projects/gamingWeb.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(7) {
+    background-image: url('../images/projects/mathFight.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(8) {
+    background-image: url('../images/projects/movieHeaven.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(9) {
+    background-image: url('../images/projects/reptileInfection.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(10) {
+    background-image: url('../images/projects/shoesWebsite.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content:nth-child(1):hover::after {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Darken the background image on hover for the first element */
 }
 
 .title {
@@ -717,22 +823,77 @@ label {
     background-color: #151515;
     height: 40px;
     margin: 0px;
+
 }
 
 .content:hover {
-    animation: 1s 1 normal changecardCol;
-    background-color: gold;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
+
 
 .content:hover .title {
     animation: 1s 1 normal changeOpa;
     opacity: 1;
-    color: blue;
     font-size: 15px;
-    font-family: monospace;
     text-align: center;
-    font-weight: 900;
-    letter-spacing: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.title {
+    font-family: 'Protest Riot', sans-serif;
+}
+
+#modalTitle {
+    font-family: 'Protest Riot', sans-serif;
+}
+
+#modalImage {
+    width: 200px;
+    height: auto;
+}
+
+#modalDescription {
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#githubLink>img {
+    width: 50px;
+    height: auto;
 }
 
 .menu-item.but>img {

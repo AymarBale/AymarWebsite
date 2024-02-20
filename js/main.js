@@ -1,12 +1,19 @@
-let contactBut ;let contectSection;
-document.addEventListener('DOMContentLoaded', function() {
-    let taille = document.getElementById('taille');
-    taille.innerText = "width :"+window.innerWidth+"\n height :"+window.innerHeight;
-    contactBut = document.getElementById('contactMeBut');
-    contectSection = document.getElementById('nav-8');
-    contactBut.addEventListener('click', function() {
-        // Scroll to the specific section (section2 in this case)
-        contectSection.scrollIntoView({ behavior: 'smooth' });
-    });
-});
+function openModal(title, description, imagePath, githubLink) {
+    var modal = document.getElementById('myModal');
+    var modalTitle = document.getElementById('modalTitle');
+    var modalDescription = document.getElementById('modalDescription');
+    var modalImage = document.getElementById('modalImage');
+    var githubLinkElement = document.getElementById('githubLink');
 
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    modalImage.src = imagePath;
+    githubLinkElement.href = githubLink;
+
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+}

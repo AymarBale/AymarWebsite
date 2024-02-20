@@ -1,0 +1,103 @@
+.myNavbar {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-bar {
+    border-radius: 25px;
+    height: fit-content;
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, .4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    padding: 0 10px;
+    margin: 10px 0 0 0;
+}
+
+.menu-bar li {
+    list-style: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin: 0 8px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.menu-bar li::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: 0.2s;
+    border-radius: 25px;
+}
+
+.menu-bar li:hover {
+    color: black;
+}
+
+.menu-bar li:hover::before {
+    background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+    box-shadow: 0px 3px 20px 0px black;
+    transform: scale(1.2);
+}
+
+.menu-bar li.clicked {
+    color: black;
+}
+
+.menu-bar li.clicked::before {
+    background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+    box-shadow: 0px 3px 20px 0px black;
+    transform: scale(1.2);
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-family: myFont;
+    background-color: black;
+    padding: 15px 15px;
+}
+
+/* Additional styles for smaller screens */
+@media (max-width: 709px) {
+    .myNavbar {
+        left: auto;
+        /* Reset to default */
+        transform: none;
+    }
+
+    .menu-bar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-bar li {
+        margin: 8px 0;
+    }
+
+    .toggle-button {
+        display: inline-block;
+        /* Show the button for smaller screens */
+    }
+}
+
+@media (min-width:710px) {
+    .myNavbar {
+        display: flex;
+    }
+}
