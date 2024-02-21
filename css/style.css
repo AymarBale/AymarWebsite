@@ -852,9 +852,22 @@ label {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    /* Your existing styles for the modal */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    /* Adjust the duration as needed */
+}
+
+.modal.show {
+    /* Display the modal and change opacity when the 'show' class is added */
+    display: block;
+    opacity: 1;
 }
 
 .modal-content {
+    border: 2px solid #0047ab;
+    border-radius: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -880,8 +893,12 @@ label {
     font-family: 'Protest Riot', sans-serif;
 }
 
+#modalTech {
+    font-family: 'Protest Riot', sans-serif;
+}
+
 #modalImage {
-    width: 200px;
+    width: 400px;
     height: auto;
 }
 
@@ -889,6 +906,15 @@ label {
     display: inline-block;
     vertical-align: top;
     font-family: 'Courier New', Courier, monospace;
+}
+
+#language {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px dashed gold;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
 }
 
 #githubLink>img {

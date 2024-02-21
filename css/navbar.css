@@ -257,7 +257,7 @@ section {
     background: transparent;
     border: solid 4px gold;
     position: relative;
-    color: black;
+    color: gold;
     cursor: pointer;
     z-index: 1;
     padding: 10px 20px;

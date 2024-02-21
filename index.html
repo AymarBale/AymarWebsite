@@ -91,7 +91,10 @@
                     toggleButton.style.display = 'none';
                 }
             }
-
+            function scrollToContact() {
+                var contactSection = document.getElementById('nav-8');
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
             // Call the adjustStyles function initially and on window resize
             adjustStyles();
             window.addEventListener('resize', adjustStyles);
@@ -121,7 +124,7 @@
         </nav>
 
 
-        <button class="contactMe" id="contactMeBut" href="#nav-8">contact ME</button>
+        <button class="contactMe" id="contactMeBut" onclick="scrollToContact()">contact ME</button>
         <section class="nav-9">
             <nav>
                 <a class="item" href="#nav-5">
@@ -135,7 +138,8 @@
             <h1>Let me introduce myself</h1>
         </a>
         <div id="first"><img src="./images/profilePic.jpeg" id="profilePic" alt="">
-            <div class="info">I am a student in college in a CS program right now looking for a internship and althought
+            <div class="info">I am a student in college in a CS program right now looking for a opportunity and
+                althought
                 I
                 am a
                 beginner at programming I am willing to learn more and receives critical feedback on what I'm doing
@@ -226,7 +230,7 @@
                 <p>Bitbucket</p>
             </div>
         </div>
-        <h2>TASK MANAGEMENT TOOLS - EXTRENAL TOOLS</h2>
+        <h2>TASK MANAGEMENT TOOLS - EXTRENAL TOOLS/DESIGN PATTERN</h2>
         <div>
             <div class="skill"><img src="./images/Icon/trello.png" alt="">
                 <p>Trello</p>
@@ -237,9 +241,14 @@
             <div class="skill"><img src="./images/Icon/postman.png" alt="">
                 <p>PostMan</p>
             </div>
+            <div class="skill"><img src="./images/Icon/scrum.png" alt="">
+                <p>Agile</p>
+            </div>
+            <div class="skill"><img src="./images/Icon/Mvc.png" alt="">
+                <p>MVC</p>
+            </div>
         </div>
         <h2 id="softSkill">------- Soft skill ------- :</h2>
-        <h2>- Agile methodology </h2>
         <h2>- Problem-solving and analytical skills.</h2>
         <h2>- Patience and hard working.</h2>
     </div>
@@ -300,44 +309,44 @@
     <div class="MonPortofolio" id="nav-7"><a href="#nav-8">PROJETS</a>
         <div class="myWork">
             <div class="content"
-                onclick="openModal('AfroBeatTrivia', 'A description for Albion.', './images/projects/afroBeat.png', 'https://github.com/AymarBale/AfroBeatTrivia')">
+                onclick="openModal('AfroBeatTrivia', 'It s a trivia game where you need to guess the name of the song but with african music' , './images/projects/afroBeat.png', 'https://github.com/AymarBale/AfroBeatTrivia','javacript/html/css')">
                 <p class="title">AfroBeatTrivia</p>
             </div>
             <div class="content"
-                onclick="openModal('CarCollection' ,'A description for ', './images/projects/CarCollection.png', 'https://github.com/AymarBale/')">
+                onclick="openModal('CarCollection' ,'It s a showcase of 3d cars with their different attributes made using three js which is a 3d library in Javascript  ', './images/projects/CarCollection.png', 'https://github.com/AymarBale/CarCollectionThree.js','Three.js')">
                 <p class="title">CarCollection</p>
             </div>
             <div class="content"
-                onclick="openModal('Dog aroundWorld' ,'A description for ', './images/projects/dog.png', 'https://github.com/AymarBale/')">
+                onclick="openModal('Dog aroundWorld' ,'It s a showcase of a 3d dog walking around a planet made using three js which is a 3d library in Javascript ', './images/projects/dog.png', 'https://github.com/AymarBale/DogThree.js','Three.js')">
                 <p class="title">Dog aroundWorld </p>
             </div>
 
             <div class="content"
-                onclick="openModal('Drip Dynastie' ,'A description for ', './images/projects/DripDynastie.png', 'https://github.com/AymarBale/')">
+                onclick="openModal('Drip Dynastie' ,'It s a cloth selling website made with a backend and a frontEnd server compose of 4 pages you can also connect to your account or create one ', './images/projects/DripDynastie.png', 'https://github.com/AymarBale/DripDynasty','React.js/Html/Css')">
                 <p class="title">Drip Dynastie</p>
             </div>
             <div class="content"
-                onclick="openModal('Js Game' ,'A description for ', './images/projects/GameJs.png', 'https://github.com/AymarBale/')">
+                onclick="openModal('Js Game' ,'It s a video game made with matter js a physics library in javascript that helps you calculate collision', './images/projects/GameJs.png', 'https://github.com/AymarBale/2dGameJavascript','Matter.js')">
                 <p class="title">Js Game</p>
             </div>
             <div class="content"
-                onclick="openModal('Gaming website' ,'A description for ', './images/projects/gamingWeb.png', 'https://github.com/AymarBale/')">
+                onclick="openModal('Gaming website' ,'It s a Gaming website made with html and css the website is entirely responsive and it was a group project', './images/projects/gamingWeb.png', 'https://github.com/AymarBale/GamingWebsite','Html/Css')">
                 <p class="title">Gaming website</p>
             </div>
             <div class="content"
-                onclick="openModal('Math Fight' ,'A description for ', './images/projects/mathFight.png', 'https://github.com/AymarBale/')">
+                onclick="openModal('Math Fight' ,'Math fight is game made using GdScript that s available on the playstore and the game it s fun and entertaining game that mixes boxing and math', './images/projects/mathFight.png', 'https://github.com/AymarBale/MathFight','GdScript')">
                 <p class="title">Math Fight</p>
             </div>
             <div class="content"
-                onclick="openModal('Movie Heaven' ,'A description for ', './images/projects/movieHeaven.png', 'https://github.com/AymarBale/')">
+                onclick="openModal('Movie Heaven' ,'Movie Heaven is a website made with a backend and a frontEnd server using J2EE and React.js the website is compose of 4 page you can rent movies ,login and register', './images/projects/movieHeaven.png', 'https://github.com/AymarBale/MovieHeaven','Java/React')">
                 <p class="title">Movie Heaven</p>
             </div>
             <div class="content"
-                onclick="openModal('Reptile Infection' ,'A description for ', './images/projects/reptileInfection.png', 'https://github.com/AymarBale/')">
+                onclick="openModal('Reptile Infection' ,'Reptile infection is a game made using gdscript that takes the regular snake game and adds a twist to it ', './images/projects/reptileInfection.png', 'https://github.com/AymarBale/ReptileInfection','GdScript')">
                 <p class="title">Reptile Infection</p>
             </div>
             <div class="content"
-                onclick="openModal('Shoe store' ,'A description for ', './images/projects/shoesWebsite.png', 'https://github.com/AymarBale/')">
+                onclick="openModal('Shoe store' ,'It s simple website that compose of 4 pages made using only html and css ', './images/projects/shoesWebsite.png', 'https://github.com/AymarBale/shoeWebsite','Html/Css')">
                 <p class="title">Shoe store</p>
             </div>
 
@@ -347,6 +356,8 @@
                 <span class="close" onclick="closeModal()">&times;</span>
                 <h2 id="modalTitle"></h2>
                 <img id="modalImage" alt="Project Image">
+                <h2 id="modalTech">Language used</h2>
+                <p id="language"></p>
                 <p id="modalDescription"></p>
 
                 <p><a id="githubLink" target="_blank"><img src="./images/Icon/github.png" alt=""></a></p>
