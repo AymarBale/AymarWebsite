@@ -215,7 +215,9 @@ label {
 */
 .AboutSection {
     width: 100%;
-    height: 1092px;
+    height: fit-content;
+    margin-top: 20px;
+    padding-bottom: 10px;
     transform: translateY(-22px);
 }
 
@@ -446,11 +448,76 @@ label {
 -------------------------------------------------------------------->
 
 */
+
+#resume {
+
+    height: fit-content;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    display: block;
+    background: linear-gradient(to right, #007bff, #006584);
+    opacity: 1;
+    height: 150px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+    box-shadow: 5px 10px 18px #888888;
+
+}
+
+#resume>h1 {
+    padding-top: 40px;
+    padding-left: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Lucida Console', Courier, monospace;
+    color: black;
+    opacity: 1;
+
+}
+
+#resume>p {
+    padding-left: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #151515;
+}
+
+#resume>img {
+    position: absolute;
+    right: 150px;
+    top: 10px;
+    height: 150px;
+    transition: transform 0.3s ease;
+}
+
+#resume:hover>img {
+    transform: scale(1.5);
+}
+
+.resumeSection {
+    transform: translateY(-22px);
+    background-color: white;
+    padding-bottom: 30px;
+}
+
+.resumeSection>a {
+    display: inline-block;
+    width: 100%;
+    color: gold;
+    font-size: 25px;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    letter-spacing: 5px;
+}
+
 .MyFormation {
     width: 100%;
-    height: 1595px;
+    height: fit-content;
     transform: translateY(-24px);
-    background-color: rgb(238, 235, 235);
+    background-color: white;
     position: relative;
 }
 
@@ -476,7 +543,7 @@ label {
     letter-spacing: 5px;
 }
 
-.MyFormation>a+h1 {
+.MyFormation>h1:first-of-type {
     width: 100%;
     color: #151515;
     font-family: monospace;
@@ -485,7 +552,8 @@ label {
     font-size: 40px;
 }
 
-.MyFormation>a+h1+p {
+
+.MyFormation>p:first-of-type {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(158, 157, 157);
@@ -533,19 +601,19 @@ label {
     margin-top: 20px;
 }
 
-.MyFormation>:nth-child(5)>.circle {
+.MyFormation .subject:nth-child(4) .circle {
     background-image: url(../images/react.png);
 }
 
-.MyFormation>:nth-child(6)>.circle {
+.MyFormation .subject:nth-child(5) .circle {
     background-image: url(../images/html.png);
 }
 
-.MyFormation>:nth-child(7)>.circle {
+.MyFormation .subject:nth-child(6) .circle {
     background-image: url(../images/java.png);
 }
 
-.MyFormation>:nth-child(8)>.circle {
+.MyFormation .subject:nth-child(7) .circle {
     background-image: url(../images/mySql.png);
 }
 

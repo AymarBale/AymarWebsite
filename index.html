@@ -95,6 +95,10 @@
                 var contactSection = document.getElementById('nav-8');
                 contactSection.scrollIntoView({ behavior: 'smooth' });
             }
+            function downloadResume() {
+                var downloadLink = document.getElementById('downloadLink');
+                downloadLink.click();
+            }
             // Call the adjustStyles function initially and on window resize
             adjustStyles();
             window.addEventListener('resize', adjustStyles);
@@ -151,9 +155,74 @@
                     <p>Universel College,Montreal <br><span>-Programming And Technologies Web - Attestation of College
                             Studies</span><br><span>September 2022 - Agust 2024</span></p>
                 </a>
+            </div>
+            <div class="MyFormation">
+                <h1>More about my formation</h1>
+                <p>In this section I will detail my formation a little bit more to give you more info
+                    on what I can do
+                </p>
 
+                <a href="#nav-7"><span>My</span> curriculum</a>
+
+                <div class="subject">
+                    <div class="line"></div>
+                    <p class="subName">Javascript and React</p>
+                    <p class="circle"><span></span></p>
+                    <p class="addInfo">Creating a server in React<br><span></span><br></p>
+                    <br>
+                    <p class="pushText"></p>
+                    <p>The
+                        curriculum introduced architecture concepts for distributed applications and familiarized
+                        students
+                        with
+                        essential tools for modern JavaScript development such as Node.js, Webpack, Babel, ESLint, and
+                        Visual
+                        Studio Code. </p>
+                </div>
+                <div class="subject">
+                    <div class="line"></div>
+                    <p class="subName">HTML and CSS</p>
+                    <p class="circle"><span></span></p>
+                    <p class="addInfo">Basis of Html and Css<br><span></span><br></p>
+                    <br>
+                    <p class="pushText"></p>
+                    <p>Students were introduced to key concepts in web development through these foundational
+                        technologies.
+                    </p>
+                </div>
+                <div class="subject">
+                    <div class="line"></div>
+                    <p class="subName">Java Servlet</p>
+                    <p class="circle"><span></span></p>
+                    <p class="addInfo">Creating a server with JEE<br><span></span><br></p>
+                    <br>
+                    <p class="pushText"></p>
+                    <p>deepened their knowledge of the Java language and gained familiarity with fundamental classes in
+                        J2EE.
+                        The curriculum covered the development of Servlets and JavaServer Pages (JSP), providing
+                        insights
+                        into
+                        the functioning of web applications and the HTTP protocol.
+                    </p>
+                </div>
+                <div class="subject">
+                    <div class="line"></div>
+                    <p class="subName">MySQL Database</p>
+                    <p class="circle"><span></span></p>
+                    <p class="addInfo">Creating a Mysql database<br><span></span><br></p>
+                    <br>
+                    <p class="pushText"></p>
+                    <p>The "Database" class covered various aspects of database management, starting with the modeling
+                        and
+                        normalization of databases. Students learned to create databases and tables, perform CRUD
+                        (Create,
+                        Read,
+                        Update, Delete) operations, and select and filter data.
+                    </p>
+                </div>
             </div>
         </div>
+
         <div id="third">
             <p>- INTEREST -</p>
             <div>
@@ -252,60 +321,16 @@
         <h2>- Problem-solving and analytical skills.</h2>
         <h2>- Patience and hard working.</h2>
     </div>
-    <div class="MyFormation" id="nav-6"><a href="#nav-7">RESUME</a>
-        <h1>More about my formation</h1>
-        <p>In this section I will detail my formation a little bit more to give you more info
-            on what I can do
-        </p>
-
-        <a href="#nav-7"><span>My</span> curriculum</a>
-
-        <div class="subject">
-            <div class="line"></div>
-            <p class="subName">Javascript and React</p>
-            <p class="circle"><span></span></p>
-            <p class="addInfo">Creating a server in React<br><span></span><br></p>
-            <br>
-            <p class="pushText"></p>
-            <p>The
-                curriculum introduced architecture concepts for distributed applications and familiarized students with
-                essential tools for modern JavaScript development such as Node.js, Webpack, Babel, ESLint, and Visual
-                Studio Code. </p>
-        </div>
-        <div class="subject">
-            <div class="line"></div>
-            <p class="subName">HTML and CSS</p>
-            <p class="circle"><span></span></p>
-            <p class="addInfo">Basis of Html and Css<br><span></span><br></p>
-            <br>
-            <p class="pushText"></p>
-            <p>Students were introduced to key concepts in web development through these foundational technologies. </p>
-        </div>
-        <div class="subject">
-            <div class="line"></div>
-            <p class="subName">Java Servlet</p>
-            <p class="circle"><span></span></p>
-            <p class="addInfo">Creating a server with JEE<br><span></span><br></p>
-            <br>
-            <p class="pushText"></p>
-            <p>deepened their knowledge of the Java language and gained familiarity with fundamental classes in J2EE.
-                The curriculum covered the development of Servlets and JavaServer Pages (JSP), providing insights into
-                the functioning of web applications and the HTTP protocol.
-            </p>
-        </div>
-        <div class="subject">
-            <div class="line"></div>
-            <p class="subName">MySQL Database</p>
-            <p class="circle"><span></span></p>
-            <p class="addInfo">Creating a Mysql database<br><span></span><br></p>
-            <br>
-            <p class="pushText"></p>
-            <p>The "Database" class covered various aspects of database management, starting with the modeling and
-                normalization of databases. Students learned to create databases and tables, perform CRUD (Create, Read,
-                Update, Delete) operations, and select and filter data.
-            </p>
+    <div class="resumeSection" id="nav-6">
+        <a href="#nav-7">RESUME</a>
+        <div id="resume" onclick="downloadResume()">
+            <h1>Download My resume here</h1>
+            <p>Just one click &rarr;</p>
+            <img src="./images/Icon/resumeIcon.png" alt="">
+            <a id="downloadLink" href="./Resume.docx" download style="display: none;"></a>
         </div>
     </div>
+
     <div class="MonPortofolio" id="nav-7"><a href="#nav-8">PROJETS</a>
         <div class="myWork">
             <div class="content"
