@@ -526,7 +526,7 @@ label {
     background-color: rgb(205, 202, 202);
     width: 2px;
     height: 235px;
-    left: 168px;
+    left: 138px;
     z-index: -1;
 }
 
@@ -599,6 +599,8 @@ label {
     border-radius: 50%;
     margin-right: 50px;
     margin-top: 20px;
+    position: absolute;
+    left: 118px;
 }
 
 .MyFormation .subject:nth-child(4) .circle {
@@ -649,6 +651,7 @@ label {
     line-height: 1.5;
     font-size: 15px;
     width: 500px;
+    text-align: left;
 }
 
 @media only screen and (max-width: 719px) {
@@ -657,7 +660,11 @@ label {
     }
 
     .MyFormation {
-        height: 1700px;
+        height: fit-content;
+    }
+
+    .MyFormation>.subject>.circle {
+        left: 40px;
     }
 
     .MyFormation>.subject>.line {
@@ -671,8 +678,12 @@ label {
         width: 600px;
     }
 
+    .MyFormation>.subject>.circle {
+        left: 30px;
+    }
+
     .MyFormation {
-        height: 1700px;
+        height: fit-content;
     }
 
     .MyFormation>.subject>.line {
@@ -686,7 +697,8 @@ label {
 */
 .contactSection {
     width: 100%;
-    height: 140vh;
+    height: fit-content;
+    padding-bottom: 20px;
     transform: translateY(-24px);
     background-color: #151515;
     position: relative;
@@ -792,7 +804,7 @@ label {
 
 .myWork {
     width: 100vw;
-    height: 900px;
+    height: fit-content;
     margin: auto;
 }
 
@@ -801,7 +813,7 @@ label {
     border-radius: 3px;
     background-color: white;
     width: 180px;
-    height: 30%;
+    height: 270px;
     margin: auto;
     display: inline-block;
     margin-top: 30px;
@@ -1000,7 +1012,6 @@ label {
 
     .MonPortofolio {
         text-align: center;
-
     }
 
     .myWork {
@@ -1010,6 +1021,10 @@ label {
 
     .content {
         height: 270px;
+    }
+
+    .content {
+        right: 20px;
     }
 }
 
@@ -1031,7 +1046,11 @@ label {
     }
 
     .AboutSection {
-        height: 1500px;
+        height: fit-content;
+    }
+
+    #resume>img {
+        right: 20px;
     }
 }
 
@@ -1070,8 +1089,12 @@ label {
     }
 
     .MonPortofolio {
-        height: 1000px;
+        height: fit-content;
         text-align: center;
+    }
+
+    #resume>img {
+        right: 20px;
     }
 
     .MyFormation>a+h1+p {
@@ -1100,6 +1123,9 @@ label {
         width: 100vw;
     }
 
+    .contactSection {
+        padding-bottom: 70px;
+    }
 }
 
 .sentEmail {
